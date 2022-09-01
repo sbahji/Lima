@@ -206,7 +206,7 @@ if __name__ == "__main__":
         device_src_path         = './target/nar/bin/i386-Linux-g++/'
     elif "x86_64" in platform.machine():
         platform                = "linux64"
-        camera_list             = ["eiger","slseiger","slsjungfrau","simulator", "xspress3", "ufxc","spectralinstrument"]
+        camera_list             = ["basler","eiger","slseiger","slsjungfrau","simulator", "xspress3", "ufxc","spectralinstrument"]
         maven_platform_options  = " --file pom_64.xml"
         maven_clean             = "mvn clean  --file pom_64.xml"
         src_path                = './target/nar/lib/i386-Linux-g++/shared/'
@@ -293,7 +293,7 @@ if __name__ == "__main__":
 
   if args.env == 'el7':
     print(" Compilation " + args.env + " sur platform " + platform)
-    camera_list             = ["simulator","lambda"]
+    camera_list             = ["basler","simulator","lambda"]
     maven_platform_options  = " --file pom_64_el7.xml"
     maven_clean             = "mvn clean --file pom_64_el7.xml"
     src_path                = './target/nar/lib/amd64-Linux-g++/shared/'
